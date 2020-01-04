@@ -1,1 +1,11 @@
+<div *ngIf="isLoggedIn()">
+    <div>
+        <h2>Welcome to Pizzaria</h2>
+    </div>
+    <nav>
+        <a routerLink="/dashboard">Dashboard</a>
+        <a routerLink="/pizzas">Pizzas</a>
+        <a (click)="logout()">Logout</a>
+    </nav>
+</div>
 <router-outlet></router-outlet>

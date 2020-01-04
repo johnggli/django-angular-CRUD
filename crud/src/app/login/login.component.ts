@@ -30,4 +30,12 @@ export class LoginComponent implements OnInit {
     );
   }
 
+  isLoggedIn() {
+    return this.userService.isLoggedIn();
+  }
+
+  moveToDashboard() {
+    this.router.navigate(['dashboard']);
+  }
+
 }
