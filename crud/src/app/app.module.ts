@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { PizzasComponent } from './pizzas/pizzas.component';
 import { PizzaDetailComponent } from './pizza-detail/pizza-detail.component';
 
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
+
+import { UserService, AuthInterceptor, AuthGuard } from './user.service';
 
 
 @NgModule({
@@ -26,7 +28,15 @@ import { LoginComponent } from './login/login.component';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    UserService,
+    AuthGuard,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true,
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Pizza } from '../pizza';
 import { PizzaService } from '../pizza.service';
 
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',

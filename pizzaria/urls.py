@@ -3,6 +3,8 @@ from .views import *
 from rest_framework_simplejwt import views as jwt_views
 from rest_framework_swagger.views import get_swagger_view
 
+from rest_framework_jwt.views import obtain_jwt_token, refresh_jwt_token
+
 schema_view = get_swagger_view(title='Pastebin API')
 
 urlpatterns = [
@@ -34,6 +36,9 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
     path('api/token/', jwt_views.TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', jwt_views.TokenRefreshView.as_view(), name='token_refresh'),
+
+    path('auth/login/', obtain_jwt_token),
+    path('auth/refresh-token/', refresh_jwt_token),
 
     path('api-docs/', schema_view),
 

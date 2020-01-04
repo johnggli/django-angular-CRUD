@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
+from datetime import timedelta
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -63,7 +64,9 @@ REST_FRAMEWORK = {
         #'rest_framework.authentication.BasicAuthentication',
         'rest_framework.authentication.SessionAuthentication',
         'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
     ),
+    'NON_FIELD_ERRORS_KEY': 'global',
     'DEFAULT_FILTER_BACKENDS': (
         #'rest_framework.filters.DjangoFilterBackend',
         'django_filters.rest_framework.DjangoFilterBackend',
@@ -73,6 +76,11 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 5,
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
+}
+
+JWT_AUTH = {
+    'JWT_ALLOW_REFRESH': True,
+    'JWT_EXPIRATION_DELTA': timedelta(days=2),
 }
 
 MIDDLEWARE = [
