@@ -143,7 +143,7 @@ class PizzaList(ListCreateAPIView):
     search_fields = ('^name',) # busca pizzas que começam com a palavra pesquisada
     ordering_fields = ('name', 'price',)
 
-    permission_classes = (IsAdminOrReadOnly,)
+    # permission_classes = (IsAdminOrReadOnly,)
 
 
 class PizzaDetail(RetrieveUpdateDestroyAPIView):
@@ -151,7 +151,7 @@ class PizzaDetail(RetrieveUpdateDestroyAPIView):
     queryset = Pizza.objects.all()
     serializer_class = PizzaSerializer
 
-    permission_classes = (IsAdminOrReadOnly,)
+    # permission_classes = (IsAdminOrReadOnly,)
 
 
 class DemandList(ListCreateAPIView):

@@ -1,11 +1,32 @@
 <h2>Pizzas</h2>
 
 <div>
-  <label>Pizza name:
-    <input #pizzaName />
-  </label>
-  <!-- (click) passes input value to add() and then clears the input -->
-  <button (click)="add(pizzaName.value); pizzaName.value=''">
+  <div>
+    <label>Pizza name:
+      <input #pizzaName />
+    </label>
+  </div>
+
+  <div>
+    <label>Pizza description:
+      <input #pizzaDesc />
+    </label>
+  </div>
+
+  <div>
+    <label>Pizza price:
+      <input #pizzaPrice />
+    </label>
+  </div>
+  
+  <button (click)="add(
+                        pizzaName.value,
+                        pizzaDesc.value, 
+                        pizzaPrice.value
+                      );
+                      pizzaName.value='';
+                      pizzaDesc.value='';
+                      pizzaPrice.value=''">
     add
   </button>
 </div>

@@ -36,4 +36,9 @@ export class PizzaDetailComponent implements OnInit {
     this.location.back();
   }
 
+  save() {
+    this.pizzaService.updatePizza(this.pizza)
+    .subscribe(() => this.goBack());
+  }
+
 }
