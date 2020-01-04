@@ -79,7 +79,7 @@ class ProgressSerializer(HyperlinkedModelSerializer):
 class PizzaSerializer(HyperlinkedModelSerializer):
     class Meta:
         model = Pizza
-        fields = '__all__'
+        fields = ('url', 'pk', 'name', 'description', 'price')
 
 
 class DemandSerializer(HyperlinkedModelSerializer):
