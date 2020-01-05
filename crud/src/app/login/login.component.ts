@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   input;
+  showErrorMessage;
 
   constructor(
       private userService: UserService,
@@ -25,8 +26,10 @@ export class LoginComponent implements OnInit {
   }
 
   loginUser() {
+    this.showErrorMessage = false;
     this.userService.loginUser(this.input).subscribe(
-      response => this.router.navigate(['dashboard'])
+      response => this.router.navigate(['dashboard']),
+      error => this.showErrorMessage = true
     );
   }
 

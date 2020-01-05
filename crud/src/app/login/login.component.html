@@ -15,4 +15,9 @@
     </div>
   
     <input type="button" class="btn" value="Sign in" (click)="loginUser()">
+    
+    <div *ngIf="showErrorMessage">
+        <p>Invalid username and password.</p>
+        <p>Please try again.</p>
+    </div>
 </div>
