@@ -14,33 +14,31 @@
   </ul>
 </div>
 
-<div>
-  <div>
-    <label>Pizza name:
-      <input #pizzaName />
-    </label>
-  </div>
 
-  <div>
-    <label>Pizza description:
-      <input #pizzaDesc />
-    </label>
-  </div>
-
-  <div>
-    <label>Pizza price:
-      <input #pizzaPrice />
-    </label>
-  </div>
+<div class="pizza-box">
+  <div class="pizza-form">
+    <div class="textbox">
+        <input #pizzaName placeholder="Name">
+    </div>
   
-  <button (click)="add(
-                        pizzaName.value,
-                        pizzaDesc.value, 
-                        pizzaPrice.value
-                      );
-                      pizzaName.value='';
-                      pizzaDesc.value='';
-                      pizzaPrice.value=''">
-    add
-  </button>
+    <div class="textbox">
+        <input #pizzaDesc placeholder="Description">
+    </div>
+  
+    <div class="textbox">
+        <input #pizzaPrice placeholder="Price">
+    </div>
+  
+    <input type="button"
+           class="btn" 
+           value="Add pizza" 
+           (click)="add(
+                      pizzaName.value,
+                      pizzaDesc.value, 
+                      pizzaPrice.value
+                    );
+                    pizzaName.value='';
+                    pizzaDesc.value='';
+                    pizzaPrice.value=''">
+  </div>
 </div>

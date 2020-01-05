@@ -243,3 +243,16 @@ button.delete {
   justify-content: center;
   margin-left: -5em;
 }
+
+.pizza-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pizza-form {
+  width: 450px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  color: white;
+}
