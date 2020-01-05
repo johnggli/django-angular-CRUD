@@ -71,14 +71,20 @@ body{
 
 .btn{
   width: 100%;
-  background: #fff;
-  border: 2px solid #fff;
-  color: #27184f;
+  background: #27184f;
+  border: 2px solid #27184f;
+  color: #fff;
   padding: 5px;
   font-size: 18px;
   cursor: pointer;
   margin: 12px 0;
   font-weight: bold;
+}
+
+.btn:hover {
+  background: #fff;
+  border: 2px solid #fff;
+  color: #27184f;
 }
 
 /* my css */
