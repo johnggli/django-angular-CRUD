@@ -1,11 +1,23 @@
 <div *ngIf="pizza">
+  <div class="full-width">
     <h2>{{pizza.name | uppercase}} Details</h2>
-    <div><span>pk: </span>{{pizza.pk}}</div>
-    <div>
-      <label>name:
-        <input [(ngModel)]="pizza.name" placeholder="name"/>
-      </label>
-    </div>
-    <button (click)="goBack()">go back</button>
-    <button (click)="save()">save</button>
   </div>
+
+  <div class="details">
+    <div class="detail-box">
+
+      <div class="textbox">
+          <input [(ngModel)]="pizza.name" type="text" placeholder="Name">
+      </div>
+      <div class="textbox">
+          <input [(ngModel)]="pizza.description" type="text" placeholder="Description">
+      </div>
+      <div class="textbox">
+          <input [(ngModel)]="pizza.price" type="text" placeholder="Price">
+      </div>
+    
+      <input type="button" class="btn" value="Go back" (click)="goBack()">
+      <input type="button" class="btn" value="Save" (click)="save()">
+    </div>
+  </div>
+</div>

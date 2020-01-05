@@ -23,7 +23,7 @@ body{
   
   /* Set a background color that will be displayed
      while the background image is loading */
-  background-color: #f56468;
+  background-color: #27184f;
 }
 
 .login-box{
@@ -71,13 +71,14 @@ body{
 
 .btn{
   width: 100%;
-  background: none;
+  background: #fff;
   border: 2px solid #fff;
-  color: white;
+  color: #27184f;
   padding: 5px;
   font-size: 18px;
   cursor: pointer;
   margin: 12px 0;
+  font-weight: bold;
 }
 
 /* my css */
@@ -262,13 +263,13 @@ button.delete {
   margin-left: -5em;
 }
 
-.pizza-box {
+.pizza-box, .details {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.pizza-form {
+.pizza-form, .detail-box {
   width: 450px;
   margin-top: 50px;
   margin-bottom: 100px;
