@@ -2,6 +2,18 @@
   <h2>Pizzas</h2>
 </div>
 
+<div class="pizza-list">
+  <ul class="pizzas">
+    <li *ngFor="let pizza of pizzas">
+      <a routerLink="/pizzas/{{pizza.pk}}">
+        <span class="badge">{{pizza.pk}}</span> {{pizza.name}}
+      </a>
+      <button class="delete" title="delete pizza"
+        (click)="delete(pizza)">x</button>
+    </li>
+  </ul>
+</div>
+
 <div>
   <div>
     <label>Pizza name:
@@ -32,13 +44,3 @@
     add
   </button>
 </div>
-
-<ul class="pizzas">
-  <li *ngFor="let pizza of pizzas">
-    <a routerLink="/pizzas/{{pizza.pk}}">
-      <span class="badge">{{pizza.pk}}</span> {{pizza.name}}
-    </a>
-    <button class="delete" title="delete pizza"
-      (click)="delete(pizza)">x</button>
-  </li>
-</ul>

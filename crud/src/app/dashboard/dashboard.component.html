@@ -2,12 +2,12 @@
   <h2>Dashboard</h2>
 </div>
 
-<h3>Top Pizzas</h3>
-<div class="grid grid-pad">
+<div class="grid">
   <a *ngFor="let pizza of pizzas" class="col-1-4"
     routerLink="/pizzas/{{pizza.pk}}">
     <div class="module pizza">
-      <h4>{{pizza.name}}</h4>
+      <h3>{{pizza.name}}</h3>
+      <h4>R$ {{pizza.price}}</h4>
     </div>
   </a>
 </div>

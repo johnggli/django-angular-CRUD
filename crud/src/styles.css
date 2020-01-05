@@ -4,7 +4,7 @@ body{
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: url(assets/duotone.png) no-repeat;
+  background: url(assets/duotone.png) repeat;
   background-size: cover;
 }
 
@@ -69,6 +69,8 @@ body{
     margin: 0;
     padding: 0;
     overflow: hidden;
+    background-color: #27184f;
+    box-shadow: 0 5px 5px -5px #000;
 }
 
 .navbar ul li {
@@ -79,7 +81,7 @@ body{
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 10px 20px 10px 20px;
     text-decoration: none;
     font-weight: bold;
 }
@@ -101,6 +103,143 @@ h2 {
     display: inline-block;
 }
 
+h3 {
+  text-transform: uppercase;
+  font-size: 22px;
+}
+
+h4 {
+  color: #f56468;
+}
+
 .full-width{
     text-align:center
+}
+
+
+
+
+
+/* dashboard */
+
+[class*='col-'] {
+  float: left;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.grid {
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 30px;
+}
+
+.col-1-4 {
+  width: 50%;
+}
+
+.module {
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  background-color: #27184f;
+  border-radius: 10px;
+}
+
+.module:hover {
+  background-color: #fff;
+  cursor: pointer;
+  color: #27184f;
+}
+
+@media (max-width: 600px) {
+  .module {
+    font-size: 10px; }
+}
+
+@media (max-width: 1024px) {
+  .module {
+    min-width: 60px;
+  }
+}
+
+
+
+
+/* pizzas */
+
+.pizzas {
+  list-style-type: none;
+  width: 30em;
+}
+.pizzas li {
+  position: relative;
+  cursor: pointer;
+  background-color: #27184f;
+  margin: .5em;
+  height: 3em;
+}
+
+.pizzas li:hover {
+  color: #fff;
+  background-color: #27184f;
+  left: .1em;
+}
+
+.pizzas a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  display: block;
+  width: 360px;
+}
+
+.pizzas a:hover {
+  color:#fff;
+}
+
+.pizzas .badge {
+  display: inline-block;
+  color: #27184f;
+  padding: 1em 1em 2em 1em;
+  background-color:#fff;
+  line-height: 1em;
+  position: relative;
+  height: 1em;
+  min-width: 16px;
+  text-align: center;
+  margin-right: .5em;
+}
+
+button.delete:hover {
+  background-color: red;
+}
+
+button.delete {
+  border: none;
+  padding: 15px 15px 16px 15px;
+  cursor: pointer;
+  position: relative;
+  left: 424px;
+  top: -47px;
+  background-color: #f56468;
+  color: white;
+}
+
+
+.pizza-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -5em;
 }
