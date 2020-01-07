@@ -13,6 +13,7 @@ import { LoginComponent } from './login/login.component';
 
 import { UserService, AuthInterceptor, AuthGuard } from './user.service';
 import { ManagersComponent } from './managers/managers.component';
+import { ManagerDetailComponent } from './manager-detail/manager-detail.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { ManagersComponent } from './managers/managers.component';
     PizzaDetailComponent,
     DashboardComponent,
     LoginComponent,
-    ManagersComponent
+    ManagersComponent,
+    ManagerDetailComponent
   ],
   imports: [
     BrowserModule,

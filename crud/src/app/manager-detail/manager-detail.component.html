@@ -1,0 +1,27 @@
+<div *ngIf="manager">
+    <div class="full-width">
+      <h2>{{manager.name | uppercase}} Details</h2>
+    </div>
+  
+    <div class="details">
+      <div class="detail-box">
+  
+        <div class="textbox">
+            <input [(ngModel)]="manager.name" type="text" placeholder="Name">
+        </div>
+        <div class="textbox">
+            <input [(ngModel)]="manager.email" type="text" placeholder="Email">
+        </div>
+        <div class="textbox">
+            <input [(ngModel)]="manager.cpf" type="text" placeholder="CPF">
+        </div>
+        <div class="textbox">
+            <input [(ngModel)]="manager.salary" type="text" placeholder="Salary">
+        </div>
+      
+        <input type="button" class="btn" value="Go back" (click)="goBack()">
+        <input type="button" class="btn" value="Save" (click)="save()">
+      </div>
+    </div>
+  </div>
+  

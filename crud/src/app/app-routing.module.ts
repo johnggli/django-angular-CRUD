@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 
 import { AuthGuard } from './user.service';
 import { ManagersComponent } from './managers/managers.component';
+import { ManagerDetailComponent } from './manager-detail/manager-detail.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'pizzas', component: PizzasComponent, canActivate: [AuthGuard] },
   { path: 'pizzas/:pk', component: PizzaDetailComponent, canActivate: [AuthGuard] },
   { path: 'managers', component: ManagersComponent, canActivate: [AuthGuard] },
+  { path: 'managers/:pk', component: ManagerDetailComponent, canActivate: [AuthGuard] },
 ];
 
 
