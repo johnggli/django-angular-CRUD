@@ -36,7 +36,7 @@ class ClientSerializer(HyperlinkedModelSerializer):
 class ManagerSerializer(HyperlinkedModelSerializer):
     class Meta:
         model = Manager
-        fields = ('url', 'name', 'email', 'cpf', 'salary')
+        fields = ('url', 'pk', 'name', 'email', 'cpf', 'salary')
 
     def create(self, validated_data):
         user = User.objects.filter(email=validated_data['email'])

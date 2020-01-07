@@ -1,0 +1,51 @@
+<div class="full-width">
+    <h2>Managers</h2>
+  </div>
+  
+  <div class="manager-list">
+    <ul class="managers">
+      <li *ngFor="let manager of managers">
+        <a routerLink="/managers/{{manager.pk}}">
+          <span class="badge">{{manager.pk}}</span> {{manager.name}}
+        </a>
+        <button class="delete" title="delete manager"
+          (click)="delete(manager)">x</button>
+      </li>
+    </ul>
+  </div>
+  
+  
+  <div class="manager-box">
+    <div class="manager-form">
+      <div class="textbox">
+          <input #managerName placeholder="Name">
+      </div>
+    
+      <div class="textbox">
+          <input #managerEmail placeholder="Email">
+      </div>
+
+      <div class="textbox">
+          <input #managerCPF placeholder="CPF">
+      </div>
+    
+      <div class="textbox">
+          <input #managerSalary placeholder="Salary">
+      </div>
+    
+      <input type="button"
+             class="btn" 
+             value="Add manager" 
+             (click)="add(
+                        managerName.value,
+                        managerEmail.value, 
+                        managerCPF.value, 
+                        managerSalary.value
+                      );
+                      managerName.value='';
+                      managerEmail.value='';
+                      managerCPF.value='';
+                      managerSalary.value=''">
+    </div>
+  </div>
+  

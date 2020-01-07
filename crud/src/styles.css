@@ -203,11 +203,11 @@ a {
 
 /* pizzas */
 
-.pizzas {
+.pizzas, .managers {
   list-style-type: none;
   width: 30em;
 }
-.pizzas li {
+.pizzas li, .managers li {
   position: relative;
   cursor: pointer;
   background-color: #27184f;
@@ -215,13 +215,13 @@ a {
   height: 3em;
 }
 
-.pizzas li:hover {
+.pizzas li:hover, .managers li:hover {
   color: #fff;
   background-color: #27184f;
   left: .2em;
 }
 
-.pizzas a {
+.pizzas a, .managers a {
   color: #fff;
   text-decoration: none;
   position: relative;
@@ -229,11 +229,11 @@ a {
   width: 360px;
 }
 
-.pizzas a:hover {
+.pizzas a:hover, .managers a:hover {
   color:#fff;
 }
 
-.pizzas .badge {
+.pizzas .badge, .managers .badge {
   display: inline-block;
   color: #27184f;
   padding: 1em 1em 2em 1em;
@@ -262,20 +262,20 @@ button.delete {
 }
 
 
-.pizza-list {
+.pizza-list, .manager-list {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-left: -5em;
 }
 
-.pizza-box, .details {
+.pizza-box, .manager-box, .details {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.pizza-form, .detail-box {
+.pizza-form, .manager-form, .detail-box {
   width: 450px;
   margin-top: 50px;
   margin-bottom: 100px;
