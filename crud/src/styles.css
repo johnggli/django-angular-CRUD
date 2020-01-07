@@ -218,7 +218,7 @@ a {
 .pizzas li:hover {
   color: #fff;
   background-color: #27184f;
-  left: .1em;
+  left: .2em;
 }
 
 .pizzas a {
