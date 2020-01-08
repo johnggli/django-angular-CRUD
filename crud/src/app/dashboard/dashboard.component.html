@@ -3,11 +3,18 @@
 </div>
 
 <div class="grid">
-  <a *ngFor="let pizza of pizzas" class="col-1-4"
-    routerLink="/pizzas/{{pizza.pk}}">
-    <div class="module pizza">
-      <h3>{{pizza.name}}</h3>
-      <h4>R$ {{pizza.price}}</h4>
+  <a class="col-1-4"
+    routerLink="/demands">
+    <div class="module">
+      <h3>Total Demands:</h3>
+      <h3><span class="total-demands">{{totalDemands}}</span></h3>
+    </div>
+  </a>
+  <a class="col-1-4"
+    routerLink="/demands">
+    <div class="module">
+      <h3>Total Gain:</h3>
+      <h3><span class="total-gain"> R$ {{totalGain}}</span></h3>
     </div>
   </a>
 </div>

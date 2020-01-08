@@ -133,10 +133,6 @@ h3 {
   font-size: 22px;
 }
 
-h4 {
-  color: #f56468;
-}
-
 .full-width{
     text-align:center
 }
@@ -319,6 +315,10 @@ button.delete {
   width: 33%;
 }
 
-.price {
+.price, .total-gain, .total-demands {
   color: #7CFC00;
+}
+
+.total-gain, .total-demands {
+  font-size: 40px;
 }

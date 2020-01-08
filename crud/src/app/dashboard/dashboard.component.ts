@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Pizza } from '../pizza';
-import { PizzaService } from '../pizza.service';
+import { DemandService } from '../demand.service';
 
 
 @Component({
@@ -10,17 +9,24 @@ import { PizzaService } from '../pizza.service';
 })
 export class DashboardComponent implements OnInit {
 
-  pizzas: Pizza[];
+  demands: any[];
+  totalDemands: number = 0;
+  totalGain: number = 0;
 
-  constructor(private pizzaService: PizzaService) { }
+  constructor(private demandService: DemandService) { }
 
   ngOnInit() {
-    this.getPizzas();
+    this.getDemands();
   }
 
-  getPizzas() {
-    this.pizzaService.getPizzas()
-    .subscribe(data => this.pizzas = data.results.slice(0, 4));
+  getDemands() {
+    this.demandService.getDemands().subscribe(data => {
+      this.demands = data.results;
+      this.demands.forEach(demand => {
+        this.totalDemands++;
+        this.totalGain = this.totalGain + demand.pizza.price;
+      });
+    });
   }
 
 }
