@@ -14,6 +14,7 @@ import { LoginComponent } from './login/login.component';
 import { UserService, AuthInterceptor, AuthGuard } from './user.service';
 import { ManagersComponent } from './managers/managers.component';
 import { ManagerDetailComponent } from './manager-detail/manager-detail.component';
+import { DemandsComponent } from './demands/demands.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ManagerDetailComponent } from './manager-detail/manager-detail.componen
     DashboardComponent,
     LoginComponent,
     ManagersComponent,
-    ManagerDetailComponent
+    ManagerDetailComponent,
+    DemandsComponent
   ],
   imports: [
     BrowserModule,

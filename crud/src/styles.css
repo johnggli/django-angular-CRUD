@@ -281,3 +281,44 @@ button.delete {
   margin-bottom: 100px;
   color: white;
 }
+
+
+/* demands */
+
+.col-1-1 {
+  width: 100%;
+}
+
+.demand-module {
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  background-color: #27184f;
+  border-radius: 10px;
+  height: 6em;
+}
+
+.demand-left {
+  float: left;
+  font-size: 22px;
+  text-align: left;
+  width: 33%;
+}
+
+.demand-center {
+  float: left;
+  font-size: 22px;
+  text-align: center;
+  width: 34%;
+}
+
+.demand-right {
+  float: left;
+  font-size: 22px;
+  text-align: right;
+  width: 33%;
+}
+
+.price {
+  color: #7CFC00;
+}

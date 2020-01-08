@@ -83,6 +83,10 @@ class PizzaSerializer(HyperlinkedModelSerializer):
 
 
 class DemandSerializer(HyperlinkedModelSerializer):
+    client = ClientSerializer()
+    employee = EmployeeSerializer()
+    pizza = PizzaSerializer()
+    progress = ProgressSerializer()
     class Meta:
         model = Demand
         fields = ('url', 'pk', 'created', 'client', 'employee', 'pizza', 'progress')

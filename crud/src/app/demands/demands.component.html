@@ -1,0 +1,25 @@
+<div class="full-width">
+    <h2>Demands</h2>
+  </div>
+  
+  <div class="grid">
+    <a *ngFor="let demand of demands" class="col-1-1">
+      <div class="demand-module">
+
+        <div class="demand-left">
+          <div>Pizza: {{demand.pizza.name}}</div>
+          <div>Progress: {{demand.progress.name}}</div>
+        </div>
+
+        <div class="demand-center">
+          <div>Client: {{demand.client.name}}</div>
+          <div>Employee: {{demand.employee.name}}</div>
+        </div>
+
+        <div class="demand-right">
+          <div>Price: <span class="price">R$ {{demand.pizza.price}}</span></div>
+        </div>
+        
+      </div>
+    </a>
+  </div>
