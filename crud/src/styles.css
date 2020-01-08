@@ -112,7 +112,7 @@ body{
 }
 
 /* Change the link color to #fff (black) on hover */
-.navbar ul li a:hover {
+.navbar ul li a:hover, .active {
     box-shadow: inset 0 -5px 0 #fff;
 }
 
