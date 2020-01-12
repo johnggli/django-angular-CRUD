@@ -1,10 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Pizza } from '../pizza';
+import { Pizza } from '../../models/pizza';
 
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
-import { PizzaService }  from '../pizza.service';
+import { PizzaService }  from '../../services/pizza.service';
 
 
 @Component({
@@ -22,9 +22,11 @@ export class PizzaDetailComponent implements OnInit {
     private location: Location
   ) { }
 
+
   ngOnInit() {
     this.getPizza();
   }
+
 
   getPizza() {
     const pk = +this.route.snapshot.paramMap.get('pk');
@@ -32,13 +34,14 @@ export class PizzaDetailComponent implements OnInit {
     .subscribe(pizza => this.pizza = pizza);
   }
 
+
   goBack() {
     this.location.back();
   }
+
 
   save() {
     this.pizzaService.updatePizza(this.pizza)
     .subscribe(() => this.goBack());
   }
-
 }

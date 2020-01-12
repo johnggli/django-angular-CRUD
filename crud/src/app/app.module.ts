@@ -3,18 +3,18 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 
 import { AppComponent } from './app.component';
-import { PizzasComponent } from './pizzas/pizzas.component';
-import { PizzaDetailComponent } from './pizza-detail/pizza-detail.component';
+import { PizzasComponent } from './components/pizzas/pizzas.component';
+import { PizzaDetailComponent } from './components/pizza-detail/pizza-detail.component';
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { LoginComponent } from './components/login/login.component';
 
-import { UserService, AuthInterceptor, AuthGuard } from './user.service';
-import { ManagersComponent } from './managers/managers.component';
-import { ManagerDetailComponent } from './manager-detail/manager-detail.component';
-import { DemandsComponent } from './demands/demands.component';
+import { UserService, AuthInterceptor, AuthGuard } from './services/user.service';
+import { ManagersComponent } from './components/managers/managers.component';
+import { ManagerDetailComponent } from './components/manager-detail/manager-detail.component';
+import { DemandsComponent } from './components/demands/demands.component';
 
 
 @NgModule({

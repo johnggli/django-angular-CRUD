@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Pizza } from '../pizza';
+import { Pizza } from '../../models/pizza';
 
-import { PizzaService } from '../pizza.service';
+import { PizzaService } from '../../services/pizza.service';
+
 
 @Component({
   selector: 'app-pizzas',
@@ -14,14 +15,17 @@ export class PizzasComponent implements OnInit {
 
   constructor(private pizzaService: PizzaService) { }
 
+
   ngOnInit() {
     this.getPizzas();
   }
+
 
   getPizzas() {
     this.pizzaService.getPizzas()
     .subscribe(data => this.pizzas = data.results);
   }
+
 
   add(name: string, description: string, price: number) {
     name = name.trim();
@@ -38,9 +42,9 @@ export class PizzasComponent implements OnInit {
       });
   }
 
+
   delete(pizza: Pizza) {
     this.pizzas = this.pizzas.filter(p => p !== pizza);
     this.pizzaService.deletePizza(pizza).subscribe();
   }
-
 }

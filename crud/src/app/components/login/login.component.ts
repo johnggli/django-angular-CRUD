@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../user.service';
+import { UserService } from '../../services/user.service';
 import { Router } from '@angular/router';
 
 
@@ -18,12 +18,14 @@ export class LoginComponent implements OnInit {
       private router: Router
     ) { }
 
+
   ngOnInit() {
     this.input = {
       username: '',
       password: ''
     };
   }
+
 
   loginUser() {
     this.showErrorMessage = false;
@@ -33,12 +35,13 @@ export class LoginComponent implements OnInit {
     );
   }
 
+
   isLoggedIn() {
     return this.userService.isLoggedIn();
   }
 
+
   moveToDashboard() {
     this.router.navigate(['dashboard']);
   }
-
 }

@@ -8,6 +8,7 @@ import { tap, shareReplay } from 'rxjs/operators';
 import * as jwtDecode from 'jwt-decode';
 import * as moment from 'moment';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -17,6 +18,7 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
+
   loginUser(userData): Observable<any> {
     return this.http.post<any>(this.authUrl + 'login/', userData)
     .pipe(
@@ -24,6 +26,7 @@ export class UserService {
       shareReplay(),
     );
   }
+
 
   private setSession(response) {
     const token = response.token;
@@ -34,14 +37,17 @@ export class UserService {
     localStorage.setItem('expires_at', JSON.stringify(expiresAt.valueOf()));
   }
 
+
   get token(): string {
     return localStorage.getItem('token');
   }
+
 
   logout() {
     localStorage.removeItem('token');
     localStorage.removeItem('expires_at');
   }
+
 
   refreshToken() {
     if (moment().isBetween(this.getExpiration().subtract(1, 'days'), this.getExpiration())) {
@@ -55,20 +61,24 @@ export class UserService {
     }
   }
 
+
   getExpiration() {
     const expiration = localStorage.getItem('expires_at');
     const expiresAt = JSON.parse(expiration);
     return moment(expiresAt);
   }
 
+
   isLoggedIn() {
     return moment().isBefore(this.getExpiration());
   }
+
 
   isLoggedOut() {
     return !this.isLoggedIn();
   }
 }
+
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
@@ -88,6 +98,7 @@ export class AuthInterceptor implements HttpInterceptor {
   }
 }
 
+
 @Injectable()
 export class AuthGuard implements CanActivate {
 
@@ -106,6 +117,7 @@ export class AuthGuard implements CanActivate {
     }
   }
 }
+
 
 interface JWTPayload {
   user_id: number;

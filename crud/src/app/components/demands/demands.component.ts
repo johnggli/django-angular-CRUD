@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { DemandService } from '../demand.service';
+import { DemandService } from '../../services/demand.service';
+
 
 @Component({
   selector: 'app-demands',
@@ -13,13 +14,14 @@ export class DemandsComponent implements OnInit {
 
   constructor(private demandService: DemandService) { }
 
+
   ngOnInit() {
     this.getDemands();
   }
+
 
   getDemands() {
     this.demandService.getDemands()
     .subscribe(data => this.demands = data.results);
   }
-
 }

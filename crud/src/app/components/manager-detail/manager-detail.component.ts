@@ -1,10 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Manager } from '../manager';
+import { Manager } from '../../models/manager';
 
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
-import { ManagerService }  from '../manager.service';
+import { ManagerService }  from '../../services/manager.service';
+
 
 @Component({
   selector: 'app-manager-detail',
@@ -21,9 +22,11 @@ export class ManagerDetailComponent implements OnInit {
     private location: Location
   ) { }
 
+
   ngOnInit() {
     this.getManager();
   }
+
 
   getManager() {
     const pk = +this.route.snapshot.paramMap.get('pk');
@@ -31,13 +34,14 @@ export class ManagerDetailComponent implements OnInit {
     .subscribe(manager => this.manager = manager);
   }
 
+
   goBack() {
     this.location.back();
   }
+
 
   save() {
     this.managerService.updateManager(this.manager)
     .subscribe(() => this.goBack());
   }
-
 }

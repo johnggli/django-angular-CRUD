@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PizzasComponent } from './pizzas/pizzas.component';
+import { PizzasComponent } from './components/pizzas/pizzas.component';
 
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
-import { PizzaDetailComponent } from './pizza-detail/pizza-detail.component';
-import { LoginComponent } from './login/login.component';
+import { PizzaDetailComponent } from './components/pizza-detail/pizza-detail.component';
+import { LoginComponent } from './components/login/login.component';
 
-import { AuthGuard } from './user.service';
-import { ManagersComponent } from './managers/managers.component';
-import { ManagerDetailComponent } from './manager-detail/manager-detail.component';
-import { DemandsComponent } from './demands/demands.component';
+import { AuthGuard } from './services/user.service';
+import { ManagersComponent } from './components/managers/managers.component';
+import { ManagerDetailComponent } from './components/manager-detail/manager-detail.component';
+import { DemandsComponent } from './components/demands/demands.component';
 
 
 const routes: Routes = [
