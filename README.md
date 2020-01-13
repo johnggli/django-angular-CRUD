@@ -2,4 +2,4 @@
 Angular application consuming a Django rest-framework API.
 
 ## Explanatory video:
-link here
+https://youtu.be/Owx4rPfxl2g
