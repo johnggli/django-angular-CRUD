@@ -24,9 +24,14 @@
 </p>
 
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/43749971/74596298-10de2b00-502c-11ea-92b9-5d01eda86ec3.png">
+</p>
+
+
 ## :computer: Backend
 
-To initialize the API, run the command:
+To initialize the API, extract the folders from the `pizzaria-api.zip` file and run the command:
 ```bash
 python manage.py runserver
 ```
