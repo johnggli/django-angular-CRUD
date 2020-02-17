@@ -7,7 +7,7 @@
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/JohnEmerson1406/django-angular-CRUD">
   
   <a href="https://github.com/JohnEmerson1406/django-angular-CRUD/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/JohnEmerson1406/mirror-fashion">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/JohnEmerson1406/django-angular-CRUD">
   </a>
   
   <a aria-label="Versão do Node" href="https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V12.md#12.13.1">
