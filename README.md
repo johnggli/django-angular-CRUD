@@ -31,7 +31,7 @@
 
 ## :computer: Backend
 
-To initialize the API, extract the folders from the `pizzaria-api.zip` file and run the command:
+To initialize the API, run the command:
 ```bash
 python manage.py runserver
 ```
